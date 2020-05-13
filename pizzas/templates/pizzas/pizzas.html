@@ -1,0 +1,18 @@
+{% extends "pizzas/base.html" %}
+
+{% block content %}
+    <p>Pizzas</p>
+
+    <!-- create bullet list with <ul></ul> -->
+    <ul>
+        <!-- for loop for each pizza -->
+        {% for pizza in pizzas %}
+            <!-- load in variable names with double braces -->
+            <li> 
+                <a href="{% url 'pizzas:pizza' pizza.id %}">{{ pizza }}</a>
+            </li>
+           {% empty %}
+            <li>No pizzas have been added. Check back later!</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

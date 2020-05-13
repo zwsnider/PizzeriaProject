@@ -12,4 +12,6 @@ urlpatterns = [
     #Empty string represents home page, 2nd arg gives the function
     # to call from views.py, 3rd arg gives the URL its name
     path('', views.index, name='index'),
+    path('pizzas', views.pizzas, name='pizzas'),
+    path('pizzas/<int:pizza_id>/', views.pizza, name='pizza'),
 ]
