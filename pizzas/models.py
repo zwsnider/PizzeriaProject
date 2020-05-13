@@ -15,5 +15,5 @@ class Topping(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"{self.name[:50]}..."
+        return f"{self.name[:50]}."
     
