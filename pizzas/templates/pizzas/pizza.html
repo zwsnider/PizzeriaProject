@@ -7,12 +7,16 @@
     <ul>
         {% for topping in toppings %}
         <li>
-            <p> {{ topping.date_added|date:'M d, Y H:i' }} </p>
             <p> {{ topping.name|linebreaks }} </p>
         </li>
         {% empty %}
          <li> Sorry, there are no toppings for this pizza at the moment!</li>
         {% endfor %}
     </ul>
+
+    <p>
+        <a href="{% url 'pizzas:comment' pizza.id %}">Add a comment.</a>
+    </p>
+
 
 {% endblock content %}
