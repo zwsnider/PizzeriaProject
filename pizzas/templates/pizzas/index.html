@@ -1,8 +1,18 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
+{% block page_header %}
+    <div class ="jumbotron">
+        <h1 class="display-3">Browse our pizzas!</h1>
+
+        <p class="lead">Find your favorite pizza and leave
+            a comment if you love it.</p>
+    </div>
+{% endblock page_header %}
+
+{% comment %} ORIGINAL CODE PRE FORMATTING {% endcomment %}
+{% comment %} {% block content %}
     <p> 
         Snider's Pizzeria offers the finest pizzas with the best
         ingredients and environment.
     </p>
-{% endblock content %}
+{% endblock content %} {% endcomment %}
